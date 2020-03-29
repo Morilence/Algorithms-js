@@ -1,0 +1,15 @@
+{
+  "name": "algorithms-js",
+  "version": "1.0.0",
+  "description": "Js版算法合集",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Javascript",
+    "algorithms"
+  ],
+  "author": "morilence",
+  "license": "ISC"
+}
