@@ -1,3 +1,5 @@
 # Algorithms-js (continuous updating)
 
-JS版常用算法合集（续更）
+The realization of each algorithm is independent of each other, and there is no third party dependence.
+
+Algorithm source code please see the /src.

@@ -1,8 +1,22 @@
+/*!
+ * Floyd
+ * https://github.com/Morilence/Algorithms-js
+ */
+
+/**
+ * @api public
+ * @param {Array} matrix adjacent matrix (two-dimensional array)
+ * @return {Array} matrix with all shortest path info (two-dimensional array)
+ * @warning graph including negative weight loop is not allowed
+ * @author Morilence
+ */
+
 function floyd (matrix) {
     let fmatrix = [];
     for (let i=0; i < matrix.length; i++) {
         fmatrix[i] = [];
         for (let j=0; j < matrix.length; j++) {
+            // replace with object to fully describe the path info
             fmatrix[i][j] = {
                 len: matrix[i][j],
                 path: [i]
