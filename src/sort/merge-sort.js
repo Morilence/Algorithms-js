@@ -42,7 +42,7 @@ function msort (origin, order=true) {
     return seq;
 }
 
-/* 示例 */
+/* demo */
 console.log(msort([41, 11, 8, 27, 2, 9, 87, 33]));
 
 module.exports = msort;

@@ -34,7 +34,7 @@ function bsort (origin, order=true) {
     return seq;
 }
 
-/* 示例 */
+/* demo */
 console.log(bsort([13, 12, 5, 7, 101, 1]));
 
 module.exports = bsort;

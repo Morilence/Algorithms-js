@@ -52,7 +52,7 @@ function qsort (origin, order=true) {
     return seq;
 }
 
-/* 示例 */
+/* demo */
 console.log(qsort([42, 19, 58, 37, 102, 3]));
 
 module.exports = qsort;

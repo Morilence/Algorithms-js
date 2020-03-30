@@ -34,7 +34,7 @@ function isort (origin, order=true) {
     return seq;
 }
 
-/* 示例 */
+/* demo */
 console.log(isort([4, 9, 5, 7, 2, 3], false));
 
 module.exports = isort;

@@ -34,7 +34,7 @@ function kmp (text, pattern, overlap=false) {
     return locs;
 }
 
-/* 示例 */
+/* demo */
 console.log(kmp("ashgcasavasdf", "as"));
 
 module.exports = kmp;

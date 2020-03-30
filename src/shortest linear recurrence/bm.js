@@ -1,4 +1,4 @@
-const Vector = require('../libs/Vector');
+const Vector = require('../../libs/Vector');
 
 /* 推算第i项，默认有: i>recurSeq.length */
 function figure (numSeq, i, recurSeq) {
@@ -41,7 +41,7 @@ function bm (numSeq) {
     return curRecurSeq;
 }
 
-/* 示例 */
+/* demo */
 console.log(bm([1, 2, 4, 9, 20, 40, 90]));
 
 module.exports = bm;

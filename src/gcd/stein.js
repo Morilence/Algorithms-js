@@ -14,7 +14,7 @@ function stein (a, b) {
     return stein(a, b)<<offset;
 }
 
-/* 示例 */
+/* demo */
 console.log(stein(132, 48));
 
 module.exports = stein;

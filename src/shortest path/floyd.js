@@ -25,7 +25,7 @@ function floyd (matrix) {
     return fmatrix;
 }
 
-/* 示例 */
+/* demo */
 let m = [
     [0, 2, 6, 4],
     [Infinity, 0, 3, Infinity],
