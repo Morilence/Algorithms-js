@@ -31,7 +31,7 @@ function times (LRF, k) {
     return res;
 }
 
-/* default: i > recursion.length */
+/* default: i > LRF.length */
 function figure (sequence, i, LRF) {
     let res = 0;
     for (let j=0; j<LRF.length; j++) {
@@ -64,8 +64,8 @@ function bm (sequence) {
                     newLRF.push(0);
                 };
             } else {
-                let mul = deltaList[i]/deltaList[fail[fail.length-2]];
-                let aidedLRF = [];
+                let aidedLRF = [],
+                mul = deltaList[i]/deltaList[fail[fail.length-2]];
                 for (let j=0; j<i-fail[fail.length-2]-1; j++) {
                     aidedLRF.push(0);
                 };
