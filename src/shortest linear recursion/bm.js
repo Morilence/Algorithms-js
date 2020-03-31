@@ -4,7 +4,7 @@
  */
 
 function add (LRF1, LRF2) {
-    let sumSeq = [],
+    let sum = [],
     longer = null,
     shorter = null;
     if (LRF1.length > LRF2.length) {
@@ -15,12 +15,12 @@ function add (LRF1, LRF2) {
         shorter = LRF1;
     };
     for (let i=0; i<shorter.length; i++) {
-        sumSeq.push(shorter[i]+longer[i]);
+        sum.push(shorter[i]+longer[i]);
     };
     for (let i=shorter.length; i<longer.length; i++) {
-        sumSeq.push(longer[i]);
+        sum.push(longer[i]);
     };
-    return sumSeq;
+    return sum;
 }
 
 function times (LRF, k) {
