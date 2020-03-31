@@ -5,52 +5,53 @@
 
 /**
  * @api public
- * @param {Array} matrix adjacent matrix (two-dimensional array)
+ * @param {Array} adjmatrix adjacent matrix (two-dimensional array)
  * @return {Array} matrix with all shortest path info (two-dimensional array)
- * @warning graph including negative weight loop is not allowed
+ * @warning graph including negative weight side is not allowed
  * @author Morilence
  */
 
-function floyd (matrix) {
-    let fmatrix = [];
-    for (let i=0; i < matrix.length; i++) {
-        fmatrix[i] = [];
-        for (let j=0; j < matrix.length; j++) {
-            // replace with object to fully describe the path info
-            fmatrix[i][j] = {
-                len: matrix[i][j],
-                path: [i]
+function floyd (adjmatrix) {
+    let matrix = [],
+    num = adjmatrix.length;
+    for (let start=0; start<num; start++) {
+        matrix[start] = [];
+        for (let end=0; end<num; end++) {
+            // initialize
+            matrix[start][end] = {
+                dist: adjmatrix[start][end],
+                path: [start]
             };
         }
     }
-    for (let k=0; k < fmatrix.length; k++) {
-        for (let i=0; i < fmatrix.length; i++) {
-            for (let j=0; j < fmatrix.length; j++) {
-                if (fmatrix[i][j].len > fmatrix[i][k].len + fmatrix[k][j].len) {
-                    fmatrix[i][j].len = fmatrix[i][k].len + fmatrix[k][j].len;
-                    fmatrix[i][j].path.push(k);
+    for (let mid=0; mid < num; mid++) {
+        for (let start=0; start < num; start++) {
+            for (let end=0; end < num; end++) {
+                if (matrix[start][end].dist > matrix[start][mid].dist + matrix[mid][end].dist) {
+                    matrix[start][end].dist = matrix[start][mid].dist + matrix[mid][end].dist;
+                    matrix[start][end].path.push(mid);
                 }
-                if (k == fmatrix.length - 1) {
-                    fmatrix[i][j].path.push(j);
+                if (mid == num - 1) {
+                    matrix[start][end].path.push(end);
                 }
             }
         }
     }
-    return fmatrix;
+    return matrix;
 }
 
 /* demo */
-let m = [
+let adjm = [
     [0, 2, 6, 4],
     [Infinity, 0, 3, Infinity],
     [7, Infinity, 0, 1],
     [5, Infinity, 12, 0]
 ];
-let fm = floyd(m);
+let fm = floyd(adjm);
 for(let i=0; i<fm.length; i++) {
     let curRow = "";
     for (let j=0; j<fm.length; j++) {
-        curRow += (j==0?"":",") + fm[i][j].len;
+        curRow += (j==0?"":",") + fm[i][j].dist;
     };
     console.log(curRow);
 }
