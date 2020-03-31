@@ -12,7 +12,7 @@
  * @author Morilence
  */
 
-function kmp (text, pattern, overlap=false) {
+function kmp (text, pattern, overlap=true) {
     let fail = [],
     endPosOfMaxPrefix = -1; // end position of max-prefix in pattern
     fail[0] = endPosOfMaxPrefix;
@@ -39,7 +39,7 @@ function kmp (text, pattern, overlap=false) {
             if (overlap) {
                 endPosOfMatched = fail[endPosOfMatched];
             } else {
-                endPosOfMatched = 0;
+                endPosOfMatched = -1;
             }
         }
     }
@@ -47,6 +47,7 @@ function kmp (text, pattern, overlap=false) {
 }
 
 /* demo */
-console.log(kmp("ashgcasavasdf", "as"));
+console.log("demo1: ", kmp("dddhuiasddadddsaddm", "dd"));
+console.log("demo2: ", kmp("dddhuiasddadddsaddm", "dd", false));
 
 module.exports = kmp;

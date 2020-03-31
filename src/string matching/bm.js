@@ -94,6 +94,6 @@ function bm (text, pattern) {
 }
 
 /* demo */
-console.log(bm("aaaahgcaaaaasdf", "aaa"));
+console.log(bm("念天地之悠悠，独怆然而涕下", "悠"));
 
 module.exports = bm;
