@@ -1,7 +1,16 @@
-class Vector extends Sequence {
-    constructor(size) {
-        super(size);
-    }
+class Sequence {
+    // constructor() {
+    //     switch (arguments.length) {
+    //     case 1:
+    //         {
+    //         }
+    //         break;
+    //     case 2:
+    //         {
+    //         }
+    //         break;
+    //     }
+    // }
 
     static add(lhs, rhs) {
         let res = [],
@@ -36,4 +45,4 @@ class Vector extends Sequence {
     }
 }
 
-module.exports = Vector;
+module.exports = Sequence;

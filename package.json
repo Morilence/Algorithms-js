@@ -11,5 +11,22 @@
     "algorithms"
   ],
   "author": "morilence&garlicgo",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morilence/Algorithms-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Morilence/Algorithms-js/issues"
+  },
+  "homepage": "https://github.com/Morilence/Algorithms-js#readme",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "prettier": "^2.0.5"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3"
+  }
 }
