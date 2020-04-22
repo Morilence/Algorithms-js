@@ -4,7 +4,8 @@
   "description": "algorithm collection with js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix --ext .js libs src utils"
   },
   "keywords": [
     "Javascript",

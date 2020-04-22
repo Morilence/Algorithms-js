@@ -1,6 +1,6 @@
 module.exports = {
-    // endOfLine: "auto",
     semi: true,
+    endOfLine: "auto",
     printWidth: 120,
     useTabs: false,
     tabWidth: 4,

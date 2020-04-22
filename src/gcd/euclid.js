@@ -11,8 +11,8 @@
  * @author Morilence
  */
 
-function euclid (a, b) {
-    return b == 0 ? a : euclid(b, a%b);
+function euclid(a, b) {
+    return b == 0 ? a : euclid(b, a % b);
 }
 
 /* demo */

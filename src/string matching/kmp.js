@@ -12,30 +12,30 @@
  * @author Morilence
  */
 
-function kmp (text, pattern, overlap=true) {
+function kmp(text, pattern, overlap = true) {
     let fail = [],
-    endPosOfMaxPrefix = -1; // end position of max-prefix in pattern
+        endPosOfMaxPrefix = -1; // end position of max-prefix in pattern
     fail[0] = endPosOfMaxPrefix;
     for (let i = 1; i < pattern.length; i++) {
-        while (endPosOfMaxPrefix > -1 && pattern[endPosOfMaxPrefix+1] != pattern[i]) {
+        while (endPosOfMaxPrefix > -1 && pattern[endPosOfMaxPrefix + 1] != pattern[i]) {
             endPosOfMaxPrefix = fail[endPosOfMaxPrefix];
         }
-        if (pattern[endPosOfMaxPrefix+1] == pattern[i]) {
+        if (pattern[endPosOfMaxPrefix + 1] == pattern[i]) {
             endPosOfMaxPrefix++;
         }
         fail[i] = endPosOfMaxPrefix;
     }
     let locs = [],
-    endPosOfMatched = -1;
+        endPosOfMatched = -1;
     for (let i = 0; i < text.length; i++) {
-        while (endPosOfMatched > -1 && pattern[endPosOfMatched+1] != text[i]) {
+        while (endPosOfMatched > -1 && pattern[endPosOfMatched + 1] != text[i]) {
             endPosOfMatched = fail[endPosOfMatched];
         }
-        if (pattern[endPosOfMatched+1] == text[i]) {
+        if (pattern[endPosOfMatched + 1] == text[i]) {
             endPosOfMatched++;
         }
         if (endPosOfMatched == pattern.length - 1) {
-            locs.push(i-pattern.length+1);
+            locs.push(i - pattern.length + 1);
             if (overlap) {
                 endPosOfMatched = fail[endPosOfMatched];
             } else {
