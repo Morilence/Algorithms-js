@@ -13,8 +13,8 @@
 
 function dijkstra(adjmatrix) {
     let matrix = [],
-        num = adjmatrix.length;
-    visited = [];
+        num = adjmatrix.length,
+        visited = [];
     for (let start = 0; start < num; start++) {
         matrix[start] = [];
         for (let end = 0; end < num; end++) {
